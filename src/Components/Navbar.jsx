@@ -10,23 +10,23 @@ const Navbar = () => {
       </div>
       <nav className="flex-1 flex-wrap">
         <ul className="flex justify-between flex-wrap">
-          <li className="hover:text-orange-700 text-xl">
+          <li className="hover:text-orange-700 text-xl font-bold hover:underline">
             <Link to="/">Home</Link>
           </li>
-          <li className="hover:text-orange-700 text-xl">
+          <li className="hover:text-orange-700 text-xl font-bold hover:underline ">
             <Link to="/about">About</Link>
           </li>
-          <li className="hover:text-orange-700 text-xl">
+          <li className="hover:text-orange-700 text-xl font-bold hover:underline">
             <Link to="/blog">Blog</Link>
           </li>
 
-          <li className="hover:text-orange-700 text-xl">
+          <li className="hover:text-orange-700 text-xl font-bold hover:underline">
             <Link to="/skills">Skills</Link>
           </li>
-          <li className="hover:text-orange-700 text-xl">
+          <li className="hover:text-orange-700 text-xl font-bold hover:underline">
             <Link to="/projects">Projects</Link>
           </li>
-          <li className="hover:text-orange-700 text-xl ">
+          <li className="hover:text-orange-700 text-xl font-bold hover:underline ">
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
