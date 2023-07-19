@@ -5,6 +5,8 @@ import Image15 from "../assets/Gym.png";
 import Image16 from "../assets/Portfolio.png";
 import Image17 from "../assets/Adanian.png";
 
+import Image18 from "../assets/Capture.png";
+
 const Project = () => {
   return (
     <div>
@@ -27,9 +29,14 @@ const Project = () => {
                 <p className="text-white font-bold">
                   React.Js and Tailwind CSS
                 </p>
-                <button className="btn bg-orange-500   text-white py-4 px-6 rounded-lg text-center text-xl">
-                  More info
-                </button>
+                <a
+                  href="https://github.com/carren-chepkorir/Travel-App-.git"
+                  className="href"
+                >
+                  <button className="btn bg-orange-500   text-white py-4 px-6 rounded-lg text-center text-xl">
+                    View Code
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -44,9 +51,15 @@ const Project = () => {
                 <p className="text-white font-bold">
                   React.Js and Tailwind CSS
                 </p>
-                <button className="btn bg-orange-500   text-white py-4 px-6 rounded-lg text-center text-xl">
-                  More info
-                </button>
+                <a
+                  href="https://github.com/carren-chepkorir/addToCart-.git"
+                  className="href"
+                >
+                  {" "}
+                  <button className="btn bg-orange-500   text-white py-4 px-6 rounded-lg text-center text-xl">
+                    View Code
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -62,9 +75,15 @@ const Project = () => {
                 <p className="text-white font-bold">
                   React.Js and Tailwind CSS
                 </p>
-                <button className="btn bg-orange-500   text-white py-4 px-6 rounded-lg text-center text-xl">
-                  More info
-                </button>
+                <a
+                  href="https://github.com/carren-chepkorir/gym-exercises-.git"
+                  className="href"
+                >
+                  {" "}
+                  <button className="btn bg-orange-500   text-white py-4 px-6 rounded-lg text-center text-xl">
+                    View Code
+                  </button>
+                </a>
               </div>
             </div>
             <div className="relative">
@@ -78,9 +97,14 @@ const Project = () => {
                 <p className="text-white font-bold">
                   React.Js and Tailwind CSS
                 </p>
-                <button className="btn bg-orange-500   text-white py-4 px-6 rounded-lg text-center text-xl">
-                  More info
-                </button>
+                <a
+                  href="https://github.com/carren-chepkorir/Carren-Chepkorir-Portfolio-.git"
+                  className="href"
+                >
+                  <button className="btn bg-orange-500   text-white py-4 px-6 rounded-lg text-center text-xl">
+                    View Code
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -96,25 +120,34 @@ const Project = () => {
                 <p className="text-white font-bold">
                   React.Js and Tailwind CSS
                 </p>
-                <button className="btn bg-orange-500   text-white py-4 px-6 rounded-lg text-center text-xl">
-                  More info
-                </button>
+                <a
+                  href="https://github.com/carren-chepkorir/adanian-iot-website-using-react-js.git"
+                  className="href"
+                >
+                  <button className="btn bg-orange-500   text-white py-4 px-6 rounded-lg text-center text-xl">
+                    View Code
+                  </button>
+                </a>
               </div>
             </div>
             <div className="relative">
               <img
                 className="h-[400px] w-[600px] transition duration-500 hover:opacity-50"
-                src={Image17}
+                src={Image18}
                 alt="Image"
               />
               <div className="absolute text-2xl flex-col top-0 left-0 h-full w-full bg-orange-200 opacity-0 hover:opacity-100 flex justify-center items-center">
-                <h1 className="text-white font-bold ">Travel App Website</h1>
-                <p className="text-white font-bold">
-                  React.Js and Tailwind CSS
-                </p>
-                <button className="btn bg-orange-500 text-white py-4 px-6 rounded-lg text-center text-xl">
-                  More info
-                </button>
+                <h1 className="text-white font-bold ">E-commerce </h1>
+                <p className="text-white font-bold">ASP.NET</p>
+
+                <a
+                  href="https://github.com/carren-chepkorir/LadyLuxe-.git"
+                  className="href"
+                >
+                  <button className="btn bg-orange-500 text-white py-4 px-6 rounded-lg text-center text-xl">
+                    View Code
+                  </button>
+                </a>
               </div>
             </div>
           </div>
