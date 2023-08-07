@@ -2,9 +2,9 @@ import React from "react";
 import frontpic from "../assets/contact.webp";
 import { FaGithub, FaLinkedin, FaPhone, FaTwitter } from "react-icons/fa";
 
-const Contacts = () => {
+const ContactContent = () => {
   return (
-    <div className="h-[100vh]">
+    <div className="h-[100vh] mt-[100px]">
       <div className="flex flex-wrap flex-row p-10 space-x-10">
         <div className="flex flex-1 flex-wrap flex-row">
           <div className="flex flex-wrap flex-col">
@@ -125,4 +125,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default ContactContent;

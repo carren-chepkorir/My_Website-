@@ -1,18 +1,17 @@
 import React from "react";
-import Navbar from "./Navbar";
+
 import AboutPic from "../assets/About.jpeg";
 import { Link } from "react-router-dom";
 
-const AboutMe = () => {
+const AboutMeContent = () => {
   return (
-    <div>
-      <Navbar />
+    <div className="md: mt-[300px] ">
       <div className="flex flex-row ">
         <div className="flex flex-wrap flex-1">
-          <div className="text-4xl font-bold ml-10 text-orange-600 ">
+          <div className="text-4xl font-bold  text-orange-600 ">
             <h1>Who I Am</h1>
           </div>
-          <div className="text-xl leading-loose ml-10 mt-5">
+          <div className="text-xl leading-loose mt-5">
             <p>
               Hello! I'm a passionate and ambitious software engineer with
               strong foundation in{" "}
@@ -64,4 +63,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default AboutMeContent;
