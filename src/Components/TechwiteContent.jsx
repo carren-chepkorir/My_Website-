@@ -3,10 +3,10 @@ import Techw1 from "../assets/mvc.jpeg";
 import Techw2 from "../assets/Techwrite.webp";
 import Techw3 from "../assets/Techwrite2.webp";
 
-const Techwrite = () => {
+const TechwriteContent = () => {
   return (
     <div>
-      <div className="flex flex-wrap flex-row pl-20 pr-20">
+      <div className="flex flex-wrap flex-row ">
         <div className="flex flex-col">
           <h1 className="text-2xl font-bold  ">Blog</h1>
           <p className="flex leading-loose">
@@ -18,7 +18,7 @@ const Techwrite = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col pl-20 pr-20 mt-8">
+      <div className="flex flex-col mt-8">
         <div className="flex flex-row items-center ">
           <div className="transform  bg-white transition duration-400 hover:scale-125 hover:bg-white">
             <img className="h-[350px] w-[500px]" src={Techw1} alt="" />
@@ -48,11 +48,11 @@ const Techwrite = () => {
               Mastering Technical Writing
             </h2>
             <p>
-              This article is a step by step guide for beginners in Technical
-              writing.<br></br>Mastering Technical writing requires a
-              combinationof skills, <br></br>techniques and practices.It entails
-              what is Technical writing,Essential Tips and Technique and the
-              impact on the Industry.
+              This article is a step by step guide for beginners in Technical{" "}
+              <br></br>writing.Mastering Technical writing requires a <br></br>
+              combination of skills,techniques and practices.It entails what is
+              Technical writing,Essential Tips and Technique and the impact on
+              the Industry.
             </p>
             <div className="flex flex-wrap justify-center tems-center">
               <a
@@ -94,4 +94,4 @@ const Techwrite = () => {
   );
 };
 
-export default Techwrite;
+export default TechwriteContent;

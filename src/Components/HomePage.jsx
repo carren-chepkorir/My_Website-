@@ -8,11 +8,18 @@ import {
   FaPhone,
   FaWhatsapp,
 } from "react-icons/fa";
-import About from "../Pages/About";
+
+import AboutMeContent from "./AboutMeContent";
+
+import AchievementsContent from "./AchievementsContent";
+
+import TechwriteContent from "./TechwiteContent";
+import ProjectsComponent from "./ProjectsComponent";
+import ContactContent from "./ContactContent";
 
 const HomePage = () => {
   return (
-    <div className="h-[100vh] ">
+    <div className="h-[100vh] pl-[250px] pr-[250px] ">
       <Navbar />
 
       <div className="flex flex-wrap  flex-col ">
@@ -79,6 +86,11 @@ const HomePage = () => {
           </a>
         </div>
       </div>
+      <AboutMeContent />
+      <AchievementsContent />
+      <TechwriteContent />
+      <ProjectsComponent />
+      <ContactContent />
     </div>
   );
 };
