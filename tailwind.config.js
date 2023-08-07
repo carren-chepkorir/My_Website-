@@ -10,7 +10,9 @@ module.exports = {
         cursor: "cursor .10s linear infinite alternate",
         type: "type 1.8s ease-out .8s 1 normal both",
         "type-reverse": "type 1.8s ease-out 0s infinite alternate-reverse both",
+        slideLeft: "slideLeft 1s ease-in-out infinite alternate",
       },
+
       keyframes: {
         type: {
           "0%": { width: "0ch" },
@@ -24,6 +26,10 @@ module.exports = {
           "75%, 80%": { width: "8ch" },
           "85%, 90%": { width: "9ch" },
           "95%": { width: "10ch" },
+        },
+        slideLeft: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
     },
