@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import AboutPic from "../assets/About.jpeg";
 import { Link } from "react-router-dom";
 
 const AboutMe = () => {
@@ -45,12 +46,18 @@ const AboutMe = () => {
               </span>
             </p>
             <div className="mt-5">
-              <Link to="/"></Link>
+              <Link className="underline text-orange-700 italic" to="/Projects">
+                Check out some of my recent projects below
+              </Link>
             </div>
           </div>
         </div>
         <div className="flex flex-1 flex-wrap ml-10 justify-center mt-10">
-          <img src="" alt="My pic here!" />
+          <img
+            className="h-[450px] w-[350px] rounded-lg "
+            src={AboutPic}
+            alt="My pic here!"
+          />
         </div>
       </div>
     </div>
