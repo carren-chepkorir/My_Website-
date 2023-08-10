@@ -11,19 +11,19 @@ import Pic8 from "../assets/My Website assets/Image10.png";
 import Pic9 from "../assets/My Website assets/Image11.png";
 import Pic10 from "../assets/My Website assets/Image12.png";
 
-const Achievements = () => {
+const AchievementsContent = () => {
   return (
-    <div className="bg-[#ecf0f3] h-[100vh] w-auto pl-20 pr-20">
+    <div className=" bg-slate-100 h-[100vh] w-auto  mt-[100px]">
       <div className="flex flex-wrap justify-center items-center">
         <h1 className="font-bold text-4xl hover:text-orange-600 ">SKILLS</h1>
       </div>
       <div className="flex flex-wrap justify-center mt-5">
         {" "}
-        <h1 className="text-2xl font-bold">What I can Do</h1>
+        <h1 className="ld:text-2xl font-bold">What I can Do</h1>
       </div>
-      <div className="flex flex-wrap flex-col ">
-        <div className="flex flex-wrap flex-row container mt-5 space-x-15 justify-center  ">
-          <div className=" flex flex-col transform  bg-white transition duration-500 hover:scale-125 hover:bg-white  justify-center items-center">
+      <div className="flex flex-wrap flex-col justify-center items-center ">
+        <div className=" flex flex-wrap flex-row container mt-5 space-x-10 justify-center ">
+          <div className=" flex flex-col ld:transform  bg-white transition duration-500 hover:scale-125 hover:bg-white  justify-center items-center">
             <img className="h-[150px] w-[300px] rounded-lg" src={Pic11} />
             <p>HTML</p>
           </div>
@@ -40,7 +40,7 @@ const Achievements = () => {
             <p>.NET</p>
           </div>
         </div>
-        <div className="flex flex-wrap flex-row container mt-5 space-x-10 justify-center  ml-[100px] ">
+        <div className="flex flex-wrap flex-row container mt-5 space-x-10 justify-center   ">
           <div
             className="  flex  flex-col transform  bg-white  transition duration-500 hover:scale-125 hover:bg-white 
           justify-center items-center"
@@ -62,7 +62,7 @@ const Achievements = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap flex-row container mt-5 space-x-10  justify-center  ml-[100px] ">
+        <div className="flex flex-wrap flex-row container mt-5 space-x-10  justify-center   ">
           <div className=" transform  bg-white  transition duration-500 hover:scale-125 hover:bg-white flex-col flex justify-center items-center">
             <img className="h-[100px] w-[300px] " src={Pic8} />
             <p>Docker</p>
@@ -84,4 +84,4 @@ const Achievements = () => {
   );
 };
 
-export default Achievements;
+export default AchievementsContent;

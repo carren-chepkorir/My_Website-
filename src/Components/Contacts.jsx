@@ -2,14 +2,14 @@ import React from "react";
 import frontpic from "../assets/contact.webp";
 import { FaGithub, FaLinkedin, FaPhone, FaTwitter } from "react-icons/fa";
 
-const Contacts = () => {
+const ContactContent = () => {
   return (
-    <div className="h-[100vh]">
+    <div className="h-[100vh] mt-3">
       <div className="flex flex-wrap flex-row p-10 space-x-10">
         <div className="flex flex-1 flex-wrap flex-row">
           <div className="flex flex-wrap flex-col">
             {" "}
-            <h1 className="text-2xl font-bold">GET IN TOUCH WITH ME</h1>
+            <h1 className="md:text-2xl font-bold">GET IN TOUCH WITH ME</h1>
             <p className="leading-loose">
               I’m eager to hear about potential career opportunities and I would
               be pleased to chat about job openings and meet other software
@@ -49,10 +49,10 @@ const Contacts = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap flex-1 mt-10">
-          <form className="bg-gray-200 w-[600px]h-auto leading-loose rounded-lg p-3">
-            <div className="flex flex-row flex-wrap">
-              <div className=" flex flex-col ">
+        <div className="flex-1 sd:flex flex-wrap ">
+          <form className="bg-gray-200  w-full md:w-[600px] h-auto leading-loose rounded-lg p-3 md:p-6">
+            <div className="flex flex-wrap md:flex-row  ">
+              <div className=" flex flex-wrap flex-col ">
                 <label htmlFor="name">Name:</label>
                 <input
                   className=" px-3 py-2 rounded-lg border focus:outline-none focus:border-blue-500"
@@ -64,7 +64,7 @@ const Contacts = () => {
                 />
               </div>
 
-              <div className=" flex flex-col ml-8">
+              <div className=" flex-col  flex flex-wrap ld:ml-8">
                 <label htmlFor="phonenumber">Phone Number:</label>
                 <input
                   className=" px-3 py-2 rounded-lg border focus:outline-none focus:border-blue-500"
@@ -125,4 +125,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default ContactContent;
