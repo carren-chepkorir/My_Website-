@@ -1,37 +1,75 @@
-import React from "react";
-import Image1 from "../assets/logo.png";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
-  return (
-    <div className="flex flex-wrap space-x-12 items-center pl-10 pr-10 ">
-      <div className="flex flex-1">
-        <img className="rounded-full w-[30px]h-[30px] " src={Image1} />
-      </div>
-      <nav className="flex-1 flex-wrap">
-        <ul className="flex justify-between flex-wrap">
-          <li className="hover:text-orange-700 text-xl font-bold hover:underline">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="hover:text-orange-700 text-xl font-bold hover:underline ">
-            <Link to="/about">About</Link>
-          </li>
-          <li className="hover:text-orange-700 text-xl font-bold hover:underline">
-            <Link to="/blog">Blog</Link>
-          </li>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-          <li className="hover:text-orange-700 text-xl font-bold hover:underline">
-            <Link to="/skills">Skills</Link>
-          </li>
-          <li className="hover:text-orange-700 text-xl font-bold hover:underline">
-            <Link to="/projects">Projects</Link>
-          </li>
-          <li className="hover:text-orange-700 text-xl font-bold hover:underline ">
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  return (
+    <nav className="p-6 font-poppins">
+      <div className="container mx-auto flex justify-between items-center">
+        <div>
+          <img className="h-50 w-50 rounded-full" src={logo} alt="Logo" />
+        </div>
+        <div
+          className={`md:flex ${menuOpen ? "block" : "hidden"} mt-4 md:mt-0`}
+        >
+          <ul className=" md:space-x-12 md:flex md:flex-row  md:text-2xl">
+            <li>
+              <Link className="hover:text-red-700 text-black block" to="/">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-red-700 text-black block" to="/about">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-red-700 text-black block" to="/blog">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="hover:text-red-700 text-black block"
+                to="/skills"
+              >
+                Skills
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="hover:text-red-700 text-black block"
+                to="/projects"
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="hover:text-red-700 text-black block"
+                to="/contact"
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div
+          className="menu-icon md:hidden cursor-pointer"
+          onClick={toggleMenu}
+        >
+          <div className="bar w-6 h-1 bg-black my-1"></div>
+          <div className="bar w-6 h-1 bg-black my-1"></div>
+          <div className="bar w-6 h-1 bg-black my-1"></div>
+        </div>
+      </div>
+    </nav>
   );
 };
 
