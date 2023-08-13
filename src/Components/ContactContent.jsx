@@ -1,16 +1,46 @@
 import React from "react";
+import { useState } from "react";
 import frontpic from "../assets/contact.webp";
 import { FaGithub, FaLinkedin, FaPhone, FaTwitter } from "react-icons/fa";
 
 const ContactContent = () => {
+  const [formData, SetFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    phonenumber: "",
+    subject: "",
+  });
+  const HandleInputChange = (event) => {
+    const { name, value } = event.target;
+    SetFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post("/api/submit", formData);
+      if (response.status === 200) {
+        // Form submitted successfully, handle UI feedback
+        alert("Form submitted successfully");
+      }
+    } catch (error) {
+      // Handle error cases
+      console.error("Error submitting form:", error);
+      alert("An error occurred while submitting the form");
+    }
+  };
   return (
-    <div className="h-[100vh] mt-[100px]">
-      <div className="flex flex-wrap flex-row p-10 space-x-10">
+    <div className="h-[100vh] md:mt-[100px]">
+      <div className="flex flex-wrap md:flex-row md:p-10 space-x-10">
         <div className="flex flex-1 flex-wrap flex-row">
           <div className="flex flex-wrap flex-col">
             {" "}
             <h1 className="text-2xl font-bold">GET IN TOUCH WITH ME</h1>
             <p className="leading-loose">
+              {" "}
               I’m eager to hear about potential career opportunities and I would
               be pleased to chat about job openings and meet other software
               engineers in the Tech Sphere.Feel free to connect!
@@ -49,29 +79,34 @@ const ContactContent = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap flex-1 mt-10">
-          <form className="bg-gray-200 w-[600px]h-auto leading-loose rounded-lg p-3">
-            <div className="flex flex-row flex-wrap">
-              <div className=" flex flex-col ">
+        <div className="flex flex-wrap md:flex-1 mt-10 justify-center items-center">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-gray-200 md:w-[600px] h-auto leading-loose rounded-lg p-3 md:p-6"
+          >
+            <div className="flex flex-wrap md:flex-row  ">
+              <div className=" flex flex-wrap flex-col ">
                 <label htmlFor="name">Name:</label>
                 <input
                   className=" px-3 py-2 rounded-lg border focus:outline-none focus:border-blue-500"
                   type="text"
                   id="name"
                   name="name"
-                  value={FormData.name}
+                  onChange={HandleInputChange}
+                  value={formData.name}
                   required
                 />
               </div>
 
-              <div className=" flex flex-col ml-8">
+              <div className=" flex-col  flex flex-wrap ld:ml-8">
                 <label htmlFor="phonenumber">Phone Number:</label>
                 <input
                   className=" px-3 py-2 rounded-lg border focus:outline-none focus:border-blue-500"
                   type="text"
                   id="phonenumber"
                   name="phonenumber"
-                  value={FormData.phonenumber}
+                  onChange={HandleInputChange}
+                  value={formData.phonenumber}
                   required
                 />
               </div>
@@ -83,7 +118,8 @@ const ContactContent = () => {
                 type="text"
                 id="email"
                 name="email"
-                value={FormData.email}
+                onChange={HandleInputChange}
+                value={formData.email}
                 required
               />
             </div>
@@ -95,7 +131,8 @@ const ContactContent = () => {
                 type="text"
                 id="subject"
                 name="subject"
-                value={FormData.subject}
+                onChange={HandleInputChange}
+                value={formData.subject}
                 required
               />
             </div>
@@ -106,7 +143,8 @@ const ContactContent = () => {
                 type="text"
                 id="message"
                 name="message"
-                value={FormData.message}
+                onChange={HandleInputChange}
+                value={formData.message}
                 required
               />
             </div>

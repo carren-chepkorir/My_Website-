@@ -1,11 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import frontpic from "../assets/contact.webp";
 import { FaGithub, FaLinkedin, FaPhone, FaTwitter } from "react-icons/fa";
 
 const ContactContent = () => {
+  const [formData, SetFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    phonenumber: "",
+    subject: "",
+  });
+  const HandleInputChange = (event) => {
+    const { name, value } = event.target;
+    SetFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post("/api/submit", formData);
+      if (response.status === 200) {
+        // Form submitted successfully, handle UI feedback
+        alert("Form submitted successfully");
+      }
+    } catch (error) {
+      // Handle error cases
+      console.error("Error submitting form:", error);
+      alert("An error occurred while submitting the form");
+    }
+  };
+
   return (
-    <div className="h-[100vh] mt-3">
-      <div className="flex flex-wrap flex-row p-10 space-x-10">
+    <div className="h-[100vh] md:mt-3">
+      <div className="flex flex-wrap flex-row md:p-10 space-x-10 justify-center items-center space-y-5">
         <div className="flex flex-1 flex-wrap flex-row">
           <div className="flex flex-wrap flex-col">
             {" "}
@@ -49,8 +79,11 @@ const ContactContent = () => {
           </div>
         </div>
 
-        <div className="flex-1 sd:flex flex-wrap ">
-          <form className="bg-gray-200  w-full md:w-[600px] h-auto leading-loose rounded-lg p-3 md:p-6">
+        <div className="flex-1 flex flex-wrap mt-5 ">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-gray-200  w-full md:w-[600px] h-auto leading-loose rounded-lg p-3 md:p-6"
+          >
             <div className="flex flex-wrap md:flex-row  ">
               <div className=" flex flex-wrap flex-col ">
                 <label htmlFor="name">Name:</label>
@@ -59,7 +92,8 @@ const ContactContent = () => {
                   type="text"
                   id="name"
                   name="name"
-                  value={FormData.name}
+                  onChange={HandleInputChange}
+                  value={formData.name}
                   required
                 />
               </div>
@@ -71,7 +105,8 @@ const ContactContent = () => {
                   type="text"
                   id="phonenumber"
                   name="phonenumber"
-                  value={FormData.phonenumber}
+                  onChange={HandleInputChange}
+                  value={formData.phonenumber}
                   required
                 />
               </div>
@@ -83,7 +118,8 @@ const ContactContent = () => {
                 type="text"
                 id="email"
                 name="email"
-                value={FormData.email}
+                onChange={HandleInputChange}
+                value={formData.email}
                 required
               />
             </div>
@@ -95,7 +131,8 @@ const ContactContent = () => {
                 type="text"
                 id="subject"
                 name="subject"
-                value={FormData.subject}
+                onChange={HandleInputChange}
+                value={formData.subject}
                 required
               />
             </div>
@@ -106,7 +143,8 @@ const ContactContent = () => {
                 type="text"
                 id="message"
                 name="message"
-                value={FormData.message}
+                onChange={HandleInputChange}
+                value={formData.message}
                 required
               />
             </div>

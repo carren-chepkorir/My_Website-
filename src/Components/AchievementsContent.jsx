@@ -13,7 +13,7 @@ import Pic10 from "../assets/My Website assets/Image12.png";
 
 const AchievementsContent = () => {
   return (
-    <div className=" bg-slate-100 h-[100vh] w-auto  mt-[100px]">
+    <div className=" bg-slate-100 md:h-[100vh] w-auto  md:mt-[100px]">
       <div className="flex flex-wrap justify-center items-center">
         <h1 className="font-bold text-4xl hover:text-orange-600 ">SKILLS</h1>
       </div>
@@ -22,7 +22,7 @@ const AchievementsContent = () => {
         <h1 className="text-2xl font-bold">What I can Do</h1>
       </div>
       <div className="flex flex-wrap flex-col justify-center items-center ">
-        <div className="flex flex-wrap flex-row container mt-5 space-x-10 justify-center ">
+        <div className="flex flex-wrap flex-row container mt-5 space-x-10 justify-center space-y-5 ">
           <div className=" flex flex-col transform  bg-white transition duration-500 hover:scale-125 hover:bg-white  justify-center items-center">
             <img className="h-[150px] w-[300px] rounded-lg" src={Pic11} />
             <p>HTML</p>
@@ -40,7 +40,7 @@ const AchievementsContent = () => {
             <p>.NET</p>
           </div>
         </div>
-        <div className="flex flex-wrap flex-row container mt-5 space-x-10 justify-center   ">
+        <div className="flex flex-wrap flex-row container mt-5 space-x-10 justify-center space-y-5   ">
           <div
             className="  flex  flex-col transform  bg-white  transition duration-500 hover:scale-125 hover:bg-white 
           justify-center items-center"
@@ -62,7 +62,7 @@ const AchievementsContent = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap flex-row container mt-5 space-x-10  justify-center   ">
+        <div className="flex flex-wrap flex-row container mt-5 space-x-10  justify-center space-y-5   ">
           <div className=" transform  bg-white  transition duration-500 hover:scale-125 hover:bg-white flex-col flex justify-center items-center">
             <img className="h-[100px] w-[300px] " src={Pic8} />
             <p>Docker</p>

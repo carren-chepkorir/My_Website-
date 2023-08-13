@@ -10,17 +10,19 @@ import Image18 from "../assets/Capture.png";
 const Project = () => {
   return (
     <div>
-      <div className="m-10">
-        <h1 className="text-4xl font-bold">Some of my Recent Projects</h1>
-        <p1>
-          Here are some of my recent Projects.I used React.Js for frontend and
-          Tailwind Css for Styling ,C# and .NET frameworks.
-        </p1>
-        <div className="flex flex-wrap flex-col m-8">
-          <div className="flex flex-wrap flex-row space-x-10 ml-[200px] container  ">
+      <div className="md:m-10 flex flex-wrap  ">
+        <div className="flex flex-wrap justify-center items-center md:flex-col">
+          <h1 className="md:text-4xl font-bold ">Some of my Recent Projects</h1>
+          <p className=" md:ml-[250px]">
+            Here are some of my recent Projects.I used React.Js for frontend and
+            Tailwind Css for Styling ,C# and .NET frameworks.
+          </p>
+        </div>
+        <div className="flex flex-wrap flex-col md:m-8 justify-center items-center">
+          <div className="flex p-5 flex-wrap flex-row md:space-x-10 md:ml-[200px] container space-y-5 ">
             <div className="relative">
               <img
-                className="h-[400px] w-[600px] transition duration-500 hover:opacity-50"
+                className="md:h-[400px] w-[600px] transition duration-500 hover:opacity-50"
                 src={Image13}
                 alt="Image"
               />
@@ -42,11 +44,11 @@ const Project = () => {
 
             <div className="relative">
               <img
-                className="h-[400px] w-[600px] transition duration-500 hover:opacity-50"
+                className="md:h-[400px] w-[600px] transition duration-500 hover:opacity-50"
                 src={Image14}
                 alt="Image"
               />
-              <div className="absolute text-2xl flex-col top-0 left-0 h-full w-full bg-orange-200 opacity-0 hover:opacity-100 flex justify-center items-center">
+              <div className="absolute text-2xl flex-col top-0 left-0 h-full w-full bg-orange-200 opacity-0 hover:opacity-100 flex justify-center items-center ">
                 <h1 className="text-white font-bold ">BeautyApp</h1>
                 <p className="text-white font-bold">
                   React.Js and Tailwind CSS
@@ -63,10 +65,10 @@ const Project = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap flex-row container ml-[200px] space-x-10 mt-5">
+          <div className="flex flex-wrap p-5 flex-row container md:ml-[200px] space-x-10 mt-5 space-y-5">
             <div className="relative">
               <img
-                className="h-[400px] w-[600px] transition duration-500 hover:opacity-50"
+                className="md:h-[400px] w-[600px] transition duration-500 hover:opacity-50"
                 src={Image15}
                 alt="Image"
               />
@@ -88,7 +90,7 @@ const Project = () => {
             </div>
             <div className="relative">
               <img
-                className="h-[400px] w-[600px] transition duration-500 hover:opacity-50"
+                className="md:h-[400px] w-[600px] transition duration-500 hover:opacity-50"
                 src={Image16}
                 alt="Image"
               />
@@ -108,10 +110,10 @@ const Project = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap flex-row container ml-[200px] space-x-10 mt-5">
+          <div className="flex flex-wrap p-5 flex-row container md:ml-[200px] space-x-10 mt-5 space-y-5">
             <div className="relative">
               <img
-                className="h-[400px] w-[600px] transition duration-500 hover:opacity-50"
+                className="md:h-[400px] w-[600px] transition duration-500 hover:opacity-50"
                 src={Image17}
                 alt="Image"
               />
@@ -132,7 +134,7 @@ const Project = () => {
             </div>
             <div className="relative">
               <img
-                className="h-[400px] w-[600px] transition duration-500 hover:opacity-50"
+                className="md:h-[400px] w-[600px] transition duration-500 hover:opacity-50"
                 src={Image18}
                 alt="Image"
               />
